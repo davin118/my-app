@@ -1,6 +1,10 @@
 import Computer from "./Computer";
-function ListComputer(props){
-    const listComputerRender= props.elements.map(element =>{
+import useContextComputer from "../hooks/useContextComputer";
+function ListComputer(){
+
+    const computerContext=useContextComputer();
+
+    let listComputerRender= computerContext.listComputers.map(element =>{
         return <Computer
             // marca= {Element.Marca}
             // modelo = {Element.Modelo}   
@@ -8,7 +12,8 @@ function ListComputer(props){
             // imagen = {Element.Imagen}
             value = {element}
             key={element.Id}
-            fnAddFavoritesComputer={props.fnAddFavoritesComputer}
+            fnAddFavoritesComputer={computerContext.addComputerFavorites}
+            searchComputer={computerContext.searchComputer}
         />
     });
     

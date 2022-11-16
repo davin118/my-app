@@ -1,10 +1,11 @@
 import Favorito from "./Favorito";
-
-function ListFavoritos(props){
-    let listaFavoritosRender=  props.elements.map(Element=>{
+import useContextComputer from "../hooks/useContextComputer";
+function ListFavoritos(){
+    const computerContext=useContextComputer();
+    let listaFavoritosRender=computerContext.listComputersFavoritas.map(Element=>{
         return(<Favorito key={Element.Id}
             value={Element}
-           deleComputerFavorites={props.deleComputerFavorites}/>);
+           deleComputerFavorites={computerContext.deleComputerFavorites}/>);
     });
 
     return(

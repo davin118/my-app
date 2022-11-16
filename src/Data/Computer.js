@@ -1,22 +1,22 @@
 let dataComputer= [
     {
         "Id": 1,
-        "Marca":"HP Elitebook",
-        "Modelo":"Folio 9480m",
+        "Marca":"HP",
+        "Modelo":"Elitebook Folio 9480m",
         "Descripcion":"Procesador Intel Core i7 4600U (Hasta 3.3 GHz), Memoria de 4GB DDR3L, SSD de 256GB, Video Intel HD Graphics 4400, Pantalla LED de 14, Red 802.11b/g/n, Windows 7 Pro/ Windows 8.1 Pro.",
         "Imagen": "elite.png"
     },
     {
         "Id": 2,
-        "Marca":"Dell AliensWare",
-        "Modelo":"Area-51 m15x",
+        "Marca":"Dell",
+        "Modelo":"AliensWare Area-51 m15x",
         "Descripcion":"Intel Core 2 Extreme X9000 2 x 2.8 GHz, Penryn NVIDIA GeForce 8800M GTX - 512 MB VRAM, Núcleo: 500 MHz, Memoría: 799 MHz, GDDR3, Forceware 167.55, 7.15.11.6755.2048 MB, Intel PM965.200 GB - 7200 rpm, 200 GB, Realtek ALC885/889A.",
         "Imagen": "area.png"
     },
     {
         "Id": 3,
-        "Marca":"Lenovo Legion",
-        "Modelo":"Y540",
+        "Marca":"Lenovo",
+        "Modelo":"Legion Y540",
         "Descripcion":`Pantalla: IPS de 15,6 pulgadas.
         Resolución: FHD IPS (1920 x 1080) – hasta 144 Hz.
         CPU: Intel Core i7-9750H o Intel Core i5-9300H.

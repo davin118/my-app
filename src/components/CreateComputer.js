@@ -1,6 +1,10 @@
 import { useState } from "react";
+import useContextComputer from "../hooks/useContextComputer";
 
-function CreateComputer(props){
+function CreateComputer(){
+
+  const computerContext=useContextComputer();
+
   const [marca,setMarca]=useState("");
   const [modelo,setModelo]=useState("");
   const [descripcion,setDescripcion]= useState("");
@@ -8,7 +12,7 @@ function CreateComputer(props){
 
   function handleSubmit(e){
     e.preventDefault();
-    props.newComputer({
+    computerContext.newComputer({
       'Marca': marca,
       'Modelo': modelo,
       'Descripcion': descripcion,

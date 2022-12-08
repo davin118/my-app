@@ -1,8 +1,11 @@
 import { useState } from "react";
 import '../App.css';
+import {useParams,Link} from "react-router-dom"
+import DetallePage from "../page/DetallePage";
+
 function Computer(props){
     const[verMas,setVerMas]= useState(false);
-    var seccionVerMas= <button onClick={()=>setVerMas(true)} className="btn btn-success" >
+    var seccionVerMas= <button onClick={()=>setVerMas(true)} className="btn btn-success"  >
                             <i class="fa-sharp fa-solid fa-chevron-down"></i>
                         </button>
 
@@ -30,6 +33,7 @@ function Computer(props){
                     <button className="btn btn-warning" onClick={()=>props.fnAddFavoritesComputer(props.value)} >
                     <i class="fa-solid fa-heart"></i>
                     </button>
+                    <Link className="primary" to={`/list/${props.value.Id}`}>Detalle</Link>
                 </div>
             </div>
         </div> 

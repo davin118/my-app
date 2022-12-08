@@ -1,8 +1,10 @@
 import Computer from "./Computer";
 import useContextComputer from "../hooks/useContextComputer";
+import { Routes, Route, useParams } from 'react-router-dom';
 function ListComputer(){
 
     const computerContext=useContextComputer();
+    
 
     let listComputerRender= computerContext.listComputers.map(element =>{
         return <Computer
@@ -18,7 +20,7 @@ function ListComputer(){
     });
     
     return(
-        <div className="row ">
+        <div className=" row row-cols-3 ">
             {listComputerRender}
 
         </div>

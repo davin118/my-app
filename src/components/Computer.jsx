@@ -1,12 +1,11 @@
 import { useState } from "react";
 import '../App.css';
-import {useParams,Link} from "react-router-dom"
-import DetallePage from "../page/DetallePage";
+import {Link} from "react-router-dom"
 
 function Computer(props){
     const[verMas,setVerMas]= useState(false);
     var seccionVerMas= <button onClick={()=>setVerMas(true)} className="btn btn-success"  >
-                            <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                            <i className="fa-sharp fa-solid fa-chevron-down"></i>
                         </button>
 
     if(verMas){
@@ -15,7 +14,7 @@ function Computer(props){
                 onClick={()=>setVerMas(false)}
                 className="btn btn-success"
             >
-                <i class="fa-solid fa-circle-xmark"></i>
+                <i className="fa-solid fa-circle-xmark"></i>
             </button>
             <hr/>
             {props.value.Descripcion}

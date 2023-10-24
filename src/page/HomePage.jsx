@@ -1,5 +1,4 @@
-import ListComputer from "../components/ListComputer";
-import ListFavoritos from "../components/ListFavoritos";
+
 
 export default function HomePage(){
     return(

@@ -1,4 +1,3 @@
-import { setSelectionRange } from "@testing-library/user-event/dist/utils";
 import React,{ useState } from "react";
 import dataComputer from "./Computer";
 const ComputerContext = React.createContext();
@@ -21,7 +20,7 @@ function ComputerContextProvider({children}){
        }
        //Eliminar favorito
       function deleComputerFavorites(element){
-        let tempListComputer = listComputersFavoritas.filter(value => value.Id != element.Id);
+        let tempListComputer = listComputersFavoritas.filter(value => value.Id !== element.Id);
         setlistComputersFavoritas(tempListComputer);
        }
     
@@ -39,9 +38,12 @@ function ComputerContextProvider({children}){
           return setListComputers(dataComputer);
         }
         let tempListComputer = listComputers.filter((val) => {
-          if(val.Marca.toLowerCase().includes(element.Marca.toLowerCase()))
-            return val;
+          if (val.Marca.toLowerCase().includes(element.Marca.toLowerCase())) {
+            return true; // Devuelve true si la condición se cumple
+          }
+          // Si la condición no se cumple, puedes devolver false o simplemente omitir el return
         });
+        
         console.log(tempListComputer);
         return setListComputers(tempListComputer);
       }

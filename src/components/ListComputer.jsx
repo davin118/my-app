@@ -1,6 +1,5 @@
 import Computer from "./Computer";
 import useContextComputer from "../hooks/useContextComputer";
-import { Routes, Route, useParams } from 'react-router-dom';
 function ListComputer(){
 
     const computerContext=useContextComputer();

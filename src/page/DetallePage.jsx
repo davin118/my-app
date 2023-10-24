@@ -8,7 +8,7 @@ export default function DetallePage(){
  return(
     <>
         {computerContext.listComputers.map((e)=>{
-            if(e.Id==Number(Id)){
+            if(e.Id===Number(Id)){
                 return(
                     <div key={e.Id} className="ui vertically divided grid" style={{ height:"100%" }}>
                         <div className="two column row">
